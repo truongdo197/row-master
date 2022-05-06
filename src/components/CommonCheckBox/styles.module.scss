@@ -1,0 +1,20 @@
+/** @format */
+
+@import "styles/_index.scss";
+
+.checkBox {
+  :global {
+    .ant-checkbox-checked .ant-checkbox-inner {
+      background-color: $brown-color;
+      border-color: $brown-color;
+    }
+
+    .ant-checkbox-inner {
+      border-radius: 5px;
+      border-color: $brown-color;
+    }
+    .ant-checkbox-disabled.ant-checkbox-checked .ant-checkbox-inner:after {
+      border-color: $white-color;
+    }
+  }
+}

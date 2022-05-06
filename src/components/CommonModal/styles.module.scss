@@ -1,0 +1,22 @@
+@import "src/styles/index.scss";
+
+.modal {
+  margin-top: 50px;
+  :global {
+    .ant-modal-content {
+      border-radius: 20px;
+    }
+    .ant-modal-header {
+      border-radius: inherit;
+    }
+    .ant-modal-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: $brown-color;
+      text-align: center;
+    }
+    .ant-modal-body {
+      padding: 50px 100px;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@import "/src/styles/variables.scss";
+
+.pageWrapper {
+  height: 100vh;
+  // display: flex;
+  // flex-direction: column;
+  display: grid;
+  grid-template-columns: minmax(80px, auto) 1fr;
+  grid-template-rows: 71px 1fr;
+}
+.mainWrapper {
+  grid-column: span 2;
+  height: 100%;
+  display: flex;
+}
+.pageContent {
+  flex: 1;
+  overflow: auto;
+  background: $main-background;
+  padding: 16px;
+}

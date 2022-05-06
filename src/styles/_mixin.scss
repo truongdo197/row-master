@@ -1,0 +1,162 @@
+@mixin flex($align-item, $justify-content) {
+  display: flex;
+  align-items: $align-item;
+  justify-content: $justify-content;
+}
+
+// start custom padding
+@mixin p($top, $right, $bottom, $left) {
+  padding-top: $top + px !important;
+  padding-right: $right + px !important;
+  padding-bottom: $bottom + px !important;
+  padding-left: $left + px !important;
+}
+
+@mixin pl($left) {
+  padding-left: $left + px !important;
+}
+
+@mixin pr($right) {
+  padding-right: $right + px !important;
+}
+
+@mixin pb($bottom) {
+  padding-bottom: $bottom + px !important;
+}
+
+@mixin pt($top) {
+  padding-top: $top + px !important;
+}
+
+@mixin ptb($top, $bottom) {
+  padding-top: $top + px !important;
+  padding-bottom: $bottom + px !important;
+}
+
+@mixin plr($left, $right) {
+  padding-left: $left + px !important;
+  padding-right: $right + px !important;
+}
+
+@for $i from 0 to 200 {
+  .p-#{$i} {
+    @include pt($i);
+    @include pr($i);
+    @include pl($i);
+    @include pb($i);
+  }
+  .pt-#{$i} {
+    @include pt($i);
+  }
+  .pr-#{$i} {
+    @include pr($i);
+  }
+  .pb-#{$i} {
+    @include pb($i);
+  }
+  .pl-#{$i} {
+    @include pl($i);
+  }
+  .plr-#{$i} {
+    @include pl($i);
+    @include pr($i);
+  }
+  .ptb-#{$i} {
+    @include pt($i);
+    @include pb($i);
+  }
+}
+
+// end custom padding
+// start custom margin
+@mixin m($top, $right, $bottom, $left) {
+  margin-top: $top + px !important;
+  margin-right: $right + px !important;
+  margin-bottom: $bottom + px !important;
+  margin-left: $left + px !important;
+}
+
+@mixin mt($top) {
+  margin-top: $top + px !important;
+}
+
+@mixin ml($left) {
+  margin-left: $left + px !important;
+}
+
+@mixin mr($right) {
+  margin-right: $right + px !important;
+}
+
+@mixin mb($bottom) {
+  margin-bottom: $bottom + px !important;
+}
+
+@mixin mtb($top, $bottom) {
+  margin-top: $top + px !important;
+  margin-bottom: $bottom + px !important;
+}
+
+@mixin mlr($left, $right) {
+  margin-left: $left + px !important;
+  margin-right: $right + px !important;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@for $i from 0 to 200 {
+  .m-#{$i} {
+    @include mt($i);
+    @include mr($i);
+    @include ml($i);
+    @include mb($i);
+  }
+  .mt-#{$i} {
+    @include mt($i);
+  }
+  .mr-#{$i} {
+    @include mr($i);
+  }
+  .mb-#{$i} {
+    @include mb($i);
+  }
+  .ml-#{$i} {
+    @include ml($i);
+  }
+  .mlr-#{$i} {
+    @include ml($i);
+    @include mr($i);
+  }
+  .mtb-#{$i} {
+    @include mt($i);
+    @include mb($i);
+  }
+}
+
+// end of custom margin padding
+
+// width
+@mixin w($width) {
+  width: $width + px !important;
+}
+
+@for $i from 0 to 500 {
+  .w-#{$i} {
+    @include w($i);
+  }
+}
+
+// text size
+
+@mixin text($size) {
+  font-size: $size + px !important;
+}
+
+@for $i from 0 to 50 {
+  .text-#{$i} {
+    @include text($i);
+  }
+}

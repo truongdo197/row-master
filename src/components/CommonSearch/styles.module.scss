@@ -1,0 +1,30 @@
+@import "src/styles/index.scss";
+
+.inputWrapper {
+  :global {
+    .ant-input {
+      &:hover,
+      &:focus {
+        border-color: $brown-color !important;
+        box-shadow: none;
+      }
+    }
+  }
+  display: flex;
+  width: 100%;
+  // justify-content: center;
+  align-items: center;
+  position: relative;
+  .input {
+    height: $common-height;
+    border: 1px solid $gray-color-3;
+    box-sizing: border-box;
+    border-radius: $common-border-radius;
+    background: $background-color;
+  }
+
+  .icon {
+    position: absolute;
+    right: 20px;
+  }
+}

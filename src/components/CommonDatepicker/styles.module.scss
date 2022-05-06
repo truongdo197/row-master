@@ -1,0 +1,26 @@
+@import "src/styles/index.scss";
+
+.datePickerWrapper {
+  :global {
+    .ant-picker:hover,
+    .ant-picker-focused,
+    .ant-picker:focus {
+      border-color: $brown-color !important;
+      box-shadow: none;
+    }
+  }
+}
+
+.datePicker {
+  height: $common-height;
+  width: 100%;
+  border: 1px solid $gray-color-3;
+  box-sizing: border-box;
+  border-radius: $common-border-radius;
+  background: $background-color;
+  :global {
+    .ant-picker-clear {
+      right: 25px;
+    }
+  }
+}

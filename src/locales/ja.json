@@ -1,0 +1,267 @@
+{
+  "required": {
+    "message": "を入力してください"
+  },
+  "login": {
+    "login": "ログイン",
+    "id": "ID",
+    "password": "パスワード",
+    "placeholderId": "店舗コード",
+    "placeholderPassword": "パスワードを入力",
+    "rememberMe": "パスワード保存"
+  },
+  "header": {
+    "logOut": "ログアウト"
+  },
+  "noti": {
+    "title": "通知",
+    "readAll": "すべて見る",
+    "newNoti": "新着",
+    "watchedNoti": "既読"
+  },
+  "nav": {
+    "store": "店舗管理",
+    "printer": "プリンター管理",
+    "paper": "受注管理",
+    "printingPaper": "印刷紙",
+    "printerManagement": "プリンター購入管理",
+    "revenuePrinter": "売上管理",
+    "report": "レポート",
+    "contact": "店舗への連絡",
+    "cost": "システム利用料管理",
+    "masterdata": "マスターデータ",
+    "paperOrPrinter": "印刷紙 /プリンター",
+    "order": "発注ステータス",
+    "output": "出力タイプ"
+  },
+
+  "store": {
+    "heading": "店舗管理",
+    "button": "店舗を登録",
+    "placeholderSearch": "店舗や支店を検索",
+    "table": {
+      "contractCode": "契約コード",
+      "name": "店舗名",
+      "branch": "支店名",
+      "email": "メールアドレス ",
+      "contractDate": "契約終了日",
+      "status": "ステータス",
+      "printer": "プリンター",
+      "thermalPaper": "感熱紙",
+      "diagramPaper": "スリット入り用紙 "
+    },
+    "modalAdd": {
+      "title": "店舗登録",
+      "account": "アカウント作成",
+      "storeInfo": "店舗情報入力",
+      "password": "パスワード",
+      "id": "店舗コード",
+      "next": "次へ",
+      "contract": "契約",
+      "contractCode": "契約コード",
+      "createStoreDate": "店舗作成日付",
+      "info": "店舗情報",
+      "storeName": "店舗名",
+      "branchName": "支店名",
+      "postalCode": "郵便番号",
+      "province": "都道府県",
+      "city": "市区町村",
+      "address": "住所・番地",
+      "phone": "電話番号",
+      "email": "メールアドレス",
+      "fax": "FAX番号",
+      "registerAmount": "テーブル登録数",
+      "tableAmount": "テーブル数",
+      "systemFee": "システム利用料(税込)",
+      "registerNote": "※追加テーブルを登録後、 システム利用料もテーブル数に応じて変わります。",
+      "priceOfOneTable": "登録後のテーブル１台に対する価格",
+      "discount": "注文時の割引",
+      "printer": "プリンター",
+      "hasDiscount": "割引あり",
+      "standardPrice": "標準価格(税込)",
+      "discountedPrice": "割引価格(税込)",
+      "thermalPaper": "感熱紙",
+      "splitPaper": "スリット入り用紙",
+      "submit": "完了",
+      "endDate": "契約終了日"
+    },
+    "modalUpdate": {
+      "title": "店舗編集"
+    }
+  },
+
+  "paper": {
+    "heading": "印刷紙",
+    "table": {
+      "index": "No",
+      "name": "店舗名",
+      "paper": "用紙",
+      "order": "発注数",
+      "deliveryDate": "出荷日",
+      "receiveDate": "納品日",
+      "price": "価格",
+      "status": "ステータス",
+      "accept": "承諾",
+      "onHold": "保留",
+      "reject": "拒否",
+      "completed": "完了"
+    },
+    "modalUpdate": {
+      "title": "印刷紙発注編集"
+    }
+  },
+  "printer": {
+    "heading": "プリンター管理",
+    "table": {
+      "index": "No",
+      "name": "店舗名",
+      "address": "店舗住所",
+      "number": "数",
+      "deliveryDate": "納品日",
+      "price": "価格",
+      "status": "ステータス",
+      "accept": "承諾",
+      "onHold": "保留",
+      "reject": "拒否",
+      "completed": "完了"
+    }
+  },
+
+  "revenue": {
+    "heading": "売上管理",
+    "paper": "印刷紙",
+    "printer": "プリンター",
+    "export": "CSV書き出し",
+    "table": {
+      "index": "No",
+      "name": "店舗名",
+      "address": "店舗住所",
+      "amount": "数",
+      "payment": "価格(税込)",
+      "paymentDate": "支払日付",
+      "checkbox": "選択"
+    }
+  },
+
+  "saleManagement": {
+    "heading": "レポート",
+    "csvExport": "CSV書き出し",
+    "totalPerDay": "日計",
+    "totalPerMonth": "月計",
+    "totalPerYear": "年計",
+    "table": {
+      "sellDate": "売上日付",
+      "product": "品名",
+      "price": "単価(税込)",
+      "category": "カテゴリー名",
+      "province": "都道府県",
+      "storeName": "店舗名",
+      "select": "選択",
+      "branchName": "品名",
+      "location": "都道府県 "
+    }
+  },
+
+  "contact": {
+    "heading": "店舗への連絡",
+    "button": "メールを作成",
+    "table": {
+      "index": "No",
+      "subject": "件名",
+      "content": "内容",
+      "address": "宛先",
+      "transmissionTime": "送信日時"
+    },
+    "modalAdd": {
+      "title": "メールを作成",
+      "address": "宛先:",
+      "subject": "件名:",
+      "content": "内容:",
+      "selectContactList": "連絡先一覧を選択"
+    },
+    "modalDetail": {
+      "title": "詳細",
+      "address": "宛先:",
+      "dateTime": "日時:",
+      "subject": "件名:",
+      "content": "内容:"
+    }
+  },
+  "systemRevenue": {
+    "heading": "システム利用料管理",
+    "button": "CSV書き出し",
+    "monthRevenue": "月計",
+    "anualRevenue": "年計",
+    "table": {
+      "index": "No",
+      "name": "店舗名",
+      "branch": "支店名",
+      "paymentDate": "日付",
+      "payment": "金額(税込)",
+      "paymentType": "支払種類",
+      "checkbox": "選択"
+    }
+  },
+  "paperOrPirnter": {
+    "paperHeading": "印刷紙 /プリンター",
+    "printerHeading": "マスターデータ",
+    "heading": "データを追加",
+    "paper": "印刷紙",
+    "printerColor": "プリンター",
+    "printerPlacement": "タイプ",
+    "button": "データを追加",
+    "table": {
+      "index": "No",
+      "paperName": "用紙",
+      "printerColor": "色彩",
+      "printerPlacement": "タイプ"
+    },
+    "modalAdd": {
+      "title": "データを追加",
+      "paperTitle": "印刷紙を編集",
+      "printerTitle": "プリンターを編集",
+      "data": "用紙を入力",
+      "price": "価格",
+      "save": "保存",
+      "add": "追加"
+    }
+  },
+  
+  "report": {
+    "heading": "レポート",
+    "table": {
+      "salesDate": "売上日付",
+      "name": "品名",
+      "price": "価格",
+      "category": "カテゴリー名",
+      "prefectures": "都道府県",
+      "storeName": "店舗名",
+      "choice": "選択"
+    }
+  },
+  "printerManagement": {
+    "heading": "プリンター購入管理",
+    "paperHeading": "印刷紙",
+    "modalUpdate": {
+      "title": "プリンター発注編集",
+      "order": "発注数",
+      "status": "ステータス",
+      "deliveryDate": "出荷予定日",
+      "receiveDate": "納品日",
+      "hasDiscount": "割引あり",
+      "standardPrice": "標準価格",
+      "discountedPrice": "割引価格",
+      "button": "保存"
+    },
+    "table": {
+      "index": "No",
+      "name": "店舗名",
+      "placement": "タイプ",
+      "amount": "発注数",
+      "deliveryDate": "出荷日",
+      "price": "価格(税込)",
+      "status": "ステータス",
+      "paperType": "用紙"
+    }
+  }
+}

@@ -1,0 +1,88 @@
+/** @format */
+
+@import "styles/index.scss";
+
+.paperBox {
+  height: 87px;
+  background: #bffcb6;
+  border-radius: 20px;
+  position: relative;
+}
+
+.paperText {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  position: absolute;
+
+  left: 5px;
+  top: 5.75%;
+  bottom: 56.32%;
+  color: white;
+  background: #34835e;
+  border-radius: 20px 0px;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 23px;
+
+  letter-spacing: -0.02em;
+}
+
+.paperValue {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 52px;
+  letter-spacing: -0.02em;
+}
+
+.printerBox {
+  height: 87px;
+  background: #abd6fd;
+  border-radius: 20px;
+  position: relative;
+}
+
+.printerText {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  position: absolute;
+  left: 5px;
+  top: 5.75%;
+  bottom: 56.32%;
+  color: white;
+  background: #0066ff;
+  border-radius: 20px 0px;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 23px;
+
+  letter-spacing: -0.02em;
+}
+
+.printerValue {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 52px;
+  letter-spacing: -0.02em;
+}
+
+.tab {
+  border: none;
+}

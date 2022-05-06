@@ -1,0 +1,119 @@
+/** @format */
+
+@import "styles/index.scss";
+
+.modalHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .line {
+    width: 193px;
+    height: 18px !important;
+    border-top: 1px solid #e3e2e8;
+  }
+  .acount,
+  .storeInfo {
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+
+.modal {
+  margin-top: 50px;
+  :global {
+    .ant-modal-content {
+      border-radius: 20px;
+    }
+    .ant-modal-header {
+      border-radius: inherit;
+    }
+    .ant-modal-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: $brown-color;
+      text-align: center;
+      margin-top: -70px;
+    }
+    .ant-modal-body {
+      padding: 50px 100px;
+    }
+  }
+}
+
+.paddingModal {
+  :global {
+    .ant-modal-body {
+      padding: 50px 20px 50px 100px !important;
+    }
+  }
+}
+
+.footerWrapper {
+  a:hover {
+    color: brown-color-2 !important;
+  }
+}
+
+.textChangePassword {
+  color: $brown-color !important;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+}
+.footerNextPage {
+  color: $brown-color !important;
+  position: absolute;
+  right: 5px;
+  font-weight: bold;
+  font-size: 18px;
+  bottom: 10px;
+  cursor: pointer;
+}
+
+.footerNextPage:hover {
+  color: brown-color-2 !important;
+}
+
+.switch {
+  text-align: right;
+  :global {
+    .ant-switch-checked {
+      background-color: #34835e;
+    }
+  }
+}
+
+.tbStore {
+  :global {
+    .ant-table-thead > tr > th:nth-child(1) {
+      width: 120px;
+    }
+    .ant-table-thead > tr > th:nth-child(2) {
+      width: 200px;
+    }
+    .ant-table-thead > tr > th:nth-child(3) {
+      width: 200px;
+    }
+    .ant-table-thead > tr > th:nth-child(4) {
+      width: 180px;
+    }
+    .ant-table-thead > tr > th:nth-child(5),
+    th:nth-child(6),
+    th:nth-child(7),
+    th:nth-child(8),
+    th:nth-child(9) {
+      width: 120px;
+    }
+    .ant-table-thead > tr > th:last-child {
+      width: 120px;
+    }
+  }
+}

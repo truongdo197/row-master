@@ -1,0 +1,48 @@
+@import "styles/index.scss";
+
+.modal {
+  margin-top: 50px;
+  :global {
+    .ant-modal-content {
+      border-radius: 20px;
+    }
+    .ant-modal-header {
+      border-radius: inherit;
+    }
+    .ant-modal-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: $brown-color;
+      text-align: center;
+      margin-top: -70px;
+    }
+    .ant-modal-body {
+      padding: 50px 100px;
+    }
+  }
+}
+
+.btnAdd {
+  background: #e3e2e8;
+  width: 100%;
+  border: 2px dashed #630a10;
+  color: $brown-color;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: $common-border-radius;
+  height: $common-height;
+}
+
+.btnAdd:hover {
+  border: 2px dashed #630a10 !important;
+  color: $brown-color !important;
+  background-color: #d3d2d6 !important;
+}
+
+.tbPrinterDetail {
+  :global {
+    .ant-table-thead > tr > th {
+      width: calc(100% / 6);
+    }
+  }
+}

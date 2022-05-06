@@ -1,0 +1,19 @@
+/** @format */
+
+@import "./styles/index";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.page-wrapper {
+  background-color: white;
+  border-radius: 20px;
+}

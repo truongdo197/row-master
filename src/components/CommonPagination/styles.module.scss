@@ -1,0 +1,36 @@
+@import "src/styles/index.scss";
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+
+  :global {
+    .ant-pagination {
+      display: flex;
+      align-items: baseline;
+      .ant-pagination-item-link {
+        border-radius: 12px !important;
+        background-color: $yellow-color !important;
+        color: white;
+      }
+
+      .ant-pagination-item {
+        border-radius: 12px;
+        border: none;
+        font-weight: bold;
+      }
+
+      .ant-pagination-item-active {
+        background-color: $brown-color-2;
+        border-radius: 12px !important;
+        a {
+          color: white !important;
+        }
+      }
+    }
+  }
+}

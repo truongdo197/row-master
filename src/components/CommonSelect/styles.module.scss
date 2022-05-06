@@ -1,0 +1,53 @@
+/** @format */
+
+@import "src/styles/index.scss";
+
+.selectWrapper {
+  :global {
+    .ant-select-disabled {
+      .ant-select-selection-item {
+        color: black !important;
+      }
+    }
+  }
+}
+.baseSelect {
+  width: 100%;
+  :global {
+    .ant-select-selector {
+      min-height: $common-height !important;
+      width: 100% !important;
+      border: 1px solid $gray-color-3 !important;
+      box-sizing: border-box;
+      border-radius: $common-border-radius !important;
+      background: $background-color !important;
+    }
+
+    .ant-select-selection-search {
+      display: flex;
+      align-items: center;
+    }
+    .ant-select-selection-item {
+      display: flex;
+      align-items: center;
+    }
+
+    .ant-select-selection-placeholder {
+      display: flex;
+      align-items: center;
+    }
+
+    .ant-select-selection-overflow {
+      margin-left: 20px;
+      .ant-select-selection-item {
+        background: $red-gradient-color !important;
+        color: white !important;
+        border-radius: 10px !important;
+
+        .ant-select-selection-item-remove {
+          color: white !important;
+        }
+      }
+    }
+  }
+}

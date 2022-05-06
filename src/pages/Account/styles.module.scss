@@ -1,0 +1,43 @@
+@import "styles/_index.scss";
+
+.modalPicker {
+  :global {
+    .ant-modal-body {
+      padding: 50px 0px !important;
+    }
+  }
+}
+.textSelect {
+  font-weight: 400;
+  font-size: 16px;
+  color: $brown-color;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.selectedItem {
+  background-color: #fcf0c8;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+
+  .image {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+  }
+
+  .name {
+    margin-left: 10px;
+  }
+}

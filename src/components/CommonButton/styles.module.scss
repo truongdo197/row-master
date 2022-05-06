@@ -1,0 +1,57 @@
+/** @format */
+
+@import "src/styles/index.scss";
+
+.btn {
+  :global {
+    .ant-bnt:focus,
+    .ant-bnt:active {
+      border-color: none;
+      background-color: $red-gradient-color !important;
+      color: white !important;
+    }
+
+    .ant-bnt:hover {
+      border: none;
+      background-color: #630a10;
+    }
+  }
+}
+.button {
+  background: $red-gradient-color;
+  width: 100%;
+  color: white;
+  border-radius: $common-border-radius;
+  height: $common-height;
+}
+
+.medium {
+  max-width: $medium-width;
+}
+
+.small {
+  width: $small-width;
+}
+
+.super-small {
+  width: $super-small-width;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.button:hover,
+.button:active {
+  background: linear-gradient(180deg, #9a1a10 0%, #911f27 139%);
+  color: white;
+}
+
+.cancel {
+  background: #e3e2e8;
+  width: 100%;
+  color: #630a10;
+  border-radius: $common-border-radius;
+  border: 1px solid #630a10;
+  height: $common-height;
+}

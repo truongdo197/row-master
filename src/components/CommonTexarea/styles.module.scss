@@ -1,0 +1,11 @@
+@import "src/styles/index.scss";
+
+.input {
+  width: 100%;
+  :global {
+    .ant-input {
+      border-radius: 20px;
+      border: 1px solid $gray-color-3;
+    }
+  }
+}

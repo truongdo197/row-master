@@ -1,0 +1,115 @@
+@import "styles/_index.scss";
+.container {
+  padding: 0 0 20px 20px;
+  width: 100%;
+  .title {
+    color: #630a10;
+    font-weight: bold;
+    font-size: 24px;
+  }
+  .inputSearch {
+    border: 1px solid #a09db2;
+    box-sizing: border-box;
+    border-radius: 40px;
+    width: 336px;
+    height: 50px;
+    background-color: #f8f8f8;
+    :global {
+      .ant-input {
+        background-color: #f8f8f8;
+      }
+    }
+  }
+}
+.wrapperHeader {
+  display: flex;
+  margin: 40px 0 20px 0;
+}
+.datePicker {
+  background: #f8f8f8;
+  border: 1px solid #a09db2;
+  box-sizing: border-box;
+  border-radius: 40px;
+  width: 205px;
+  height: 50px;
+  margin-left: 15px;
+}
+.subtitle {
+  font-weight: bold;
+  font-size: 18px;
+}
+.itemNotification {
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0px 4px 10px 3px rgba(83, 83, 83, 0.05);
+  border-radius: 20px;
+  padding: 20px 15px;
+  margin-bottom: 20px;
+  .infoName {
+    font-size: 16px;
+    img {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 1px solid #f1f1f1;
+      margin-right: 5px;
+    }
+  }
+  .content {
+    margin-top: 15px;
+  }
+  .date {
+    font-size: 12px;
+    color: #b8b8b8;
+  }
+}
+.wrapperNotification {
+  margin-top: 20px;
+  max-height: 500px;
+  overflow: auto;
+  .status {
+    width: 10px;
+    height: 10px;
+    background-color: #34835e;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+}
+.subtitleRead {
+  margin-top: 50px;
+}
+@media screen and (max-width: "480px") {
+  .container {
+    padding: 0;
+  }
+  .wrapperHeader,
+  .searchWrapper,
+  .inputSearch {
+    width: 100% !important;
+  }
+}
+
+.modal {
+  margin-top: 50px;
+  :global {
+    .ant-modal-content {
+      border-radius: 20px;
+    }
+    .ant-modal-header {
+      border-radius: inherit;
+    }
+    .ant-modal-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: $brown-color;
+      text-align: center;
+      margin-top: -70px;
+    }
+    .ant-modal-body {
+      padding: 50px 100px;
+    }
+  }
+}

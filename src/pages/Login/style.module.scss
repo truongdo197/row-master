@@ -1,0 +1,187 @@
+@import "styles/index.scss";
+.loginContainer {
+  display: flex;
+  height: 100vh;
+  background-color: $gray-color-2;
+}
+
+.loginLogo {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loginForm {
+  width: 50%;
+  padding: 20px;
+}
+
+.loginCard {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 4px 10px 3px rgba(83, 83, 83, 0.05);
+  background: $white-color;
+  padding: 20px;
+}
+
+.loginBanner {
+  width: 100%;
+  height: 40%;
+  object-fit: cover;
+}
+.loginTitle {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 52px;
+  letter-spacing: -0.02em;
+  color: $brown-color;
+}
+.loginFormWrapper {
+  width: 100%;
+  padding-top: 30px;
+  border-radius: 20px;
+  .loginFormer {
+    padding: 0 100px;
+  }
+  :global {
+    .ant-form-item {
+      display: flex !important;
+      flex-direction: column !important;
+    }
+    .ant-form-item-label {
+      padding: 0;
+      label {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        color: #222222;
+        margin-bottom: 3px;
+      }
+    }
+    .ant-input-affix-wrapper {
+      padding: 0;
+      border-radius: 40px;
+      height: 43px;
+      background-color: #f8f8f8;
+      border: 1px solid #a09db2;
+      input {
+        height: 100%;
+        width: calc(100% - 40px);
+      }
+    }
+    .ant-form-item-required::before {
+      display: none !important;
+    }
+    .ant-form-item-required::after {
+      display: none !important;
+    }
+    .ant-input-suffix {
+      opacity: 0;
+      right: 12px;
+      top: 15px;
+      position: absolute;
+      width: 18px;
+      span {
+        width: 100%;
+      }
+    }
+    .ant-input-prefix {
+      position: absolute;
+      right: 5px;
+      bottom: 10px;
+      img {
+        width: 24px;
+      }
+    }
+    .ant-checkbox-wrapper {
+      border-radius: 20px;
+      height: 44px;
+      background-color: transparent;
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+    .ant-checkbox {
+      margin-top: 0;
+      span {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+    .ant-checkbox-inner {
+      border: 1.5px solid #b8b8b8;
+      border-radius: 5px;
+      height: 20px;
+      width: 20px;
+    }
+    .ant-checkbox-indeterminate .ant-checkbox-inner::after {
+      display: none !important;
+    }
+    .ant-checkbox-checked .ant-checkbox-inner {
+      background-color: #630a10 !important;
+      border-color: #630a10 !important;
+    }
+  }
+
+  .logoWrapper {
+    height: 50px;
+    margin-bottom: 25px;
+    .logoLogin {
+      width: 185px;
+      margin-bottom: 20px;
+      height: 50px;
+    }
+  }
+  .headerWrapper {
+    margin-bottom: 25px;
+  }
+  h2 {
+    color: #630a10;
+    font-size: 36px;
+    font-weight: 700;
+  }
+  input {
+    border-radius: 40px;
+    height: 43px;
+    background-color: #f8f8f8;
+    padding: 10px 15px !important;
+    border: 1px solid #a09db2;
+    &::placeholder {
+      font-size: 16px;
+      font-weight: 400;
+      color: #b8b8b8;
+    }
+  }
+  h3 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #630a10;
+    border-bottom: 1px solid #630a10;
+    cursor: pointer;
+  }
+
+  .buttonLogin {
+    background: linear-gradient(180deg, #cb2b1f 0%, #911f27 139%);
+    border-radius: 40px;
+    height: 50px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffff;
+    margin-top: 15px;
+  }
+}
+.rememberRow {
+  margin-bottom: 0 !important;
+  .checkboxRemember {
+    display: flex;
+    align-items: center;
+    :global {
+      .ant-checkbox {
+        margin-bottom: 6px !important;
+      }
+    }
+  }
+}

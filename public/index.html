@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Restaurant order website</title>
+    <style type="text/css">
+
+      .goog-te-banner-frame.skiptranslate {
+  
+        display: none !important;
+  
+      }
+  
+  
+  
+      body {
+  
+        top: 0 !important;
+  
+      }
+  
+      .container-dropdown {
+        z-index: 100;
+  
+        font-size: 14px;
+  
+        width: 140px;
+  
+        height: 25px;
+  
+        border-radius: 20px;
+  
+        border: 1px solid #630a10;
+  
+        position: absolute;
+  
+        display: inline-block;
+  
+        left: 310px;
+  
+        top: 20px;
+  
+        padding: 0 10px;
+  
+      }
+      .ct-language__dropdown {
+
+border-radius: 20px;
+
+display: none;
+
+position: absolute;
+
+left: -5px;
+
+background-color: #f9f9f9;
+
+min-width: 130px;
+
+box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+padding-left: 0;
+
+list-style: none;
+
+z-index: 1;
+
+}
+
+.language-list {
+
+padding: 10px 0 10px 20px;
+
+}
+
+.language-list:hover {
+
+width: 100%;
+
+background: rgba(227, 226, 232, 0.5);
+
+;
+
+}
+.languague-list {
+
+padding: 10px 0 10px 20px;
+
+}
+
+.languague-list:hover {
+
+width: 100%;
+
+background: rgba(227, 226, 232, 0.5);;
+
+}
+
+.languague-list a {
+
+font-size: 14px;
+
+color: black!important;
+
+font-weight: normal;
+
+}
+
+.languague-list a:hover {
+
+color: #630a10!important;
+
+}
+
+.container-dropdown:hover .ct-language__dropdown {
+
+display: block;
+
+}
+
+</style>
+  </head>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <div id="google_translate_element" style="display: none;"></div>
+
+  <div class="container-dropdown">
+    言語
+    <ul class="list-unstyled ct-language__dropdown">
+
+      <li class="languague-list"><a href="#" class="lang-ja lang-select" onclick={reStore()}>日本語</a></li>
+
+      <li class="languague-list"> <a href="#googtrans(en|en)" class="lang-en lang-select" data-lang="en">英語</a></li>
+      <li class="languague-list"><a href="#googtrans(en|zh-CN)" class="lang-zh-CN lang-select"
+
+        data-lang="zh-CN">简体中文</a></li>
+
+    <li class="languague-list"><a href="#googtrans(en|zh-TW)" class="lang-zh-TW lang-select"
+
+        data-lang="zh-TW">繁體中文</a></li>
+
+    <li class="languague-list"><a href="#googtrans(en|ko)" class="lang-ko lang-select" data-lang="ko">한국어</a></li>
+    <li class="languague-list"><a href="#googtrans(en|vi)" class="lang-vi lang-select" data-lang="vi">ベトナム語</a></li>
+  </ul>
+
+</div>
+<noscript>You need to enable JavaScript to run this app.</noscript>
+
+<div id="root"></div>
+
+<script type="text/javascript">
+
+  function googleTranslateElementInit() {
+
+    new google.translate.TranslateElement(
+
+      {
+
+        pageLanguage: 'ja',
+
+        autoDisplay: "true",
+
+        includedLanguages: "ja,en,zh-CN,zh-TW,ko,vi",
+
+        layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+
+      },
+
+      'google_translate_element');
+
+  }
+  function triggerHtmlEvent(element, eventName) {
+
+var event;
+
+if (document.createEvent) {
+
+  event = document.createEvent('HTMLEvents');
+
+  event.initEvent(eventName, true, true);
+
+  element.dispatchEvent(event);
+
+} else {
+
+  event = document.createEventObject();
+
+  event.eventType = eventName;
+
+  element.fireEvent('on' + event.eventType, event);
+
+}
+
+}
+function reStore() {
+
+var iframe = document.getElementsByClassName('goog-te-banner-frame')[0];
+
+if (!iframe) return;
+
+
+
+var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+var restore_el = innerDoc.getElementsByTagName("button");
+
+
+
+for (var i = 0; i < restore_el.length; i++) {
+
+  if (restore_el[i].id.indexOf("restore") >= 0) {
+
+    restore_el[i].click();
+
+    var close_el = innerDoc.getElementsByClassName("goog-close-link");
+
+    close_el[0].click();
+
+    return;
+
+  }
+
+}
+
+}
+$(document).ready(function() {
+
+$(document).on("click",".lang-select",function () {
+
+var theLang = $(this).attr('data-lang');
+
+$('.goog-te-combo').val(theLang);
+
+window.location.href = $(this).attr('href');
+
+location.reload()
+
+});
+
+})
+
+</script>
+
+
+
+<script type="text/javascript"
+
+src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+/** @format */
+
+@import "src/styles/index.scss";
+
+.table {
+  :global {
+    .ant-table-thead {
+      .ant-table-cell {
+        background-color: $yellow-color-2;
+        color: $brown-color;
+        font-weight: 700;
+        font-size: 16px;
+        font-style: normal;
+      }
+    }
+
+    .ant-table-tbody {
+      .ant-table-row:nth-child(even) {
+        background-color: $common-border-color;
+      }
+    }
+
+    .ant-pagination {
+      display: flex;
+      align-items: baseline;
+      .ant-pagination-item-link,
+      .ant-select-selector {
+        border-radius: 12px !important;
+        background-color: $yellow-color !important;
+        color: white;
+      }
+
+      .ant-pagination-item {
+        border-radius: 12px;
+        border: none;
+        font-weight: bold;
+      }
+
+      .ant-pagination-item-active {
+        background-color: $brown-color-2;
+        border-radius: 12px !important;
+        a {
+          color: white !important;
+        }
+      }
+    }
+  }
+}

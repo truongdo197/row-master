@@ -1,0 +1,51 @@
+# @format
+
+stages:
+  - DeployDevelop
+  - DeployStagingEnv
+  - DeployProductionEnv
+
+DeployDevelop:
+  stage: DeployDevelop
+  image: node:12.18.3
+  only: ["develop"]
+  script:
+    - apt-get update && apt-get install rsync -y && apt-get install openssh-server -y
+    - mkdir -p ~/.ssh
+    - ssh-keyscan -H '54.179.90.87' >> ~/.ssh/known_hosts
+    - echo "$PRIVATE_DEPLOY_KEY_DEV" > ~/.ssh/id_rsa
+    - chmod 700 ~/.ssh/id_rsa
+    - echo "$DEV_ENV" > .env
+    - npm install
+    - CI= npm run build
+    - rsync --progress -avzh -e "ssh -i ~/.ssh/id_rsa" --rsync-path="sudo rsync" --delete ./build ubuntu@54.179.90.87:/var/www/html/master_fe
+
+DeployStagingEnv:
+  stage: DeployStagingEnv
+  image: node:12.18.3
+  only: ["staging"]
+  script:
+    - apt-get update && apt-get install rsync -y && apt-get install openssh-server -y
+    - mkdir -p ~/.ssh
+    - ssh-keyscan -H '13.114.48.116' >> ~/.ssh/known_hosts
+    - echo "$STAGING_SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+    - chmod 700 ~/.ssh/id_rsa
+    - echo "$STAGING_ENV" > .env
+    - npm install
+    - CI= npm run build
+    - rsync --progress -avzh -e "ssh " --rsync-path="sudo rsync" --delete ./build ubuntu@13.114.48.116:/var/www/html/master_fe
+
+DeployProductionEnv:
+  stage: DeployProductionEnv
+  image: node:12.18.3
+  only: ["master"]
+  script:
+    - apt-get update && apt-get install rsync -y && apt-get install openssh-server -y
+    - mkdir -p ~/.ssh
+    - ssh-keyscan -H '35.72.105.84' >> ~/.ssh/known_hosts
+    - echo "$PRODUCT_SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+    - chmod 700 ~/.ssh/id_rsa
+    - echo "$PRODUCT_ENV" > .env
+    - npm install
+    - CI= npm run build
+    - rsync --progress -avzh -e "ssh " --rsync-path="sudo rsync" --delete ./build ubuntu@35.72.105.84:/var/www/html/master_fe

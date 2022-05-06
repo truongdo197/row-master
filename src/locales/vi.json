@@ -1,0 +1,19 @@
+{
+  "title": {
+    "no_data": "Không có dữ liệu"
+  },
+  "nav": {
+    "store": "Cửa hàng",
+    "order": "Đơn đặt hàng",
+    "customer": "Khách hàng",
+    "shipper": "Shipper",
+    "product": "Sản phẩm",
+    "contact": "Liên hệ",
+    "payment": "Thanh toán",
+    "system": "Hệ thống",
+    "config": "Cấu hình",
+    "account": "Tài khoản",
+    "role": "Vai trò",
+    "language": "Language"
+  }
+}
